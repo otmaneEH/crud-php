@@ -35,7 +35,7 @@ if (isset($_POST['Submit'])) {
 <body>
 
 
-	<form class="form-group col-12" action="add.php" method="post" name="form1">
+	<form class="row g-3" action="add.php" method="post" name="form1">
 		<div class="row">
 			<div class="alert alert-danger" role="alert">
 				<?php if (isset($nameEr)) {
@@ -65,34 +65,64 @@ if (isset($_POST['Submit'])) {
 		</table>
 	</form>
 
+	<form class="row g-3 col-4">
+  <!-- Email input -->
+  <div class="col-md-4">
+  <div class="form-outline mb-4">
+    <input type="email" id="form2Example1" class="form-control" />
+    <label class="form-label" for="form2Example1">Email address</label>
+  </div>
+</div>
+  <!-- Password input -->
+  <div class="form-outline mb-4">
+    <input type="password" id="form2Example2" class="form-control" />
+    <label class="form-label" for="form2Example2">Password</label>
+  </div>
 
-	<form>
-  <div class="mb-3">
-  <div class="alert alert-danger" role="alert">
-				<?php if (isset($nameEr)) {
-					echo "$nameEr";
-				} ?><br>
-				<?php if (isset($emailEr)) {
-					echo "$emailEr";
-				} ?>
-				<?php if (isset($bac)) {
-					echo "$bac";
-				} ?> </div>
-    <label for="exampleInputEmail1" class="form-label">Name</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  <!-- 2 column grid layout for inline styling -->
+  <div class="row mb-4">
+    <div class="col d-flex justify-content-center">
+      <!-- Checkbox -->
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+        <label class="form-check-label" for="form2Example31"> Remember me </label>
+      </div>
+    </div>
+
+    <div class="col">
+      <!-- Simple link -->
+      <a href="#!">Forgot password?</a>
+    </div>
   </div>
-  <div class="mb-3">
-    <label for="email" class="form-label">Email</label>
-    <input type="text" class="form-control" id="email">
+
+  <!-- Submit button -->
+  <button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
+
+  <!-- Register buttons -->
+  <div class="text-center">
+    <p>Not a member? <a href="#!">Register</a></p>
+    <p>or sign up with:</p>
+    <button type="button" class="btn btn-link btn-floating mx-1">
+      <i class="fab fa-facebook-f"></i>
+    </button>
+
+    <button type="button" class="btn btn-link btn-floating mx-1">
+      <i class="fab fa-google"></i>
+    </button>
+
+    <button type="button" class="btn btn-link btn-floating mx-1">
+      <i class="fab fa-twitter"></i>
+    </button>
+
+    <button type="button" class="btn btn-link btn-floating mx-1">
+      <i class="fab fa-github"></i>
+    </button>
   </div>
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
 </body>
 
 </html>
