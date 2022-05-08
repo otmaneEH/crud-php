@@ -1,6 +1,6 @@
 <?php
 require "header.php";
-include_once "config.php";
+include_once "db.php";
 
 if (isset($_POST['Submit'])) {
   $name = mysqli_real_escape_string($mysqli, $_POST['name']);
@@ -17,6 +17,11 @@ if (isset($_POST['Submit'])) {
     if (empty($name) || empty($email)) {
       $bac = "<br/><a href='javascript:self.history.back();'>Go Back</a>";
     }
+    $msg= `<div class="alert alert-warning">
+      echo "$nameEr";
+      echo "$emailEr";
+      echo "$bac";
+  </div>`;
   } else {
 
     $result = mysqli_query($mysqli, "INSERT INTO etudiant(name,email) VALUES('$name','$email')");
@@ -35,6 +40,7 @@ if (isset($_POST['Submit'])) {
       display: flex;
       justify-content: center;
 
+
     }
   </style>
 </head>
@@ -45,20 +51,9 @@ if (isset($_POST['Submit'])) {
   <form class="form" action="add.php" method="post" name="form1">
 
 
-    <table class="table center mt-5">
+    <table class="table col-5 center mt-5  table-hover">
       <td colspan="3">
-        
-      <div class="alert alert-danger">
-        <?php if (isset($nameEr)) {
-          echo "$nameEr";
-        } ?><br>
-        <?php if (isset($emailEr)) {
-          echo "$emailEr";
-        } ?>
-        <?php if (isset($bac)) {
-          echo "$bac";
-        } ?>
-    </div>
+        <?php $msg ?>
       </td>
       <tr>
         <td>Name</td>
@@ -76,6 +71,26 @@ if (isset($_POST['Submit'])) {
     </table>
 
   </form>
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </body>
