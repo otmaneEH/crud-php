@@ -45,7 +45,7 @@ if (isset($_POST['Submit'])) {
   <form class="form" action="add.php" method="post" name="form1">
 
 
-    <table class="table center">
+    <table class="table center mt-5">
       <td colspan="3">
         
       <div class="alert alert-danger">
