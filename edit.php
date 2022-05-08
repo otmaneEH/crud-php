@@ -6,8 +6,8 @@ if (isset($_POST['update'])) {
 
 	$id = mysqli_real_escape_string($mysqli, $_POST['id']);
 
-	$name = $_POST['name'];
-	$email = $_POST['email'];
+	$name =mysqli_real_escape_string($mysqli, $_POST['name']);
+	$email =mysqli_real_escape_string($mysqli, $_POST['email']);
 
 	if (empty($name) || empty($email)) {
 
@@ -22,7 +22,7 @@ if (isset($_POST['update'])) {
 		}
 	} else {
 		$result = mysqli_query($mysqli, "UPDATE etudiant SET name='$name',email='$email' WHERE id=$id");
-		header("Location: index.php");
+		header("Location:index.php");
 	}
 }
 ?>
@@ -36,15 +36,6 @@ while ($res = mysqli_fetch_array($result)) {
 	$email = $res['email'];
 }
 ?>
-<html>
-
-<head>
-	<title>Edit Data</title>
-</head>
-
-<body>
-	<a href="index.php">Home</a>
-	<br /><br />
 
 	<form name="form1" method="post" action="edit.php">
 		<table border="0">
@@ -78,7 +69,7 @@ while ($res = mysqli_fetch_array($result)) {
 										<h4 class="mt-1 mb-5 pb-1">update <span style="color:orange ;"><?php echo $name; ?></span> information</h4>
 									</div>
 
-									<form class="form" action="addcopy.php" method="post" name="form1">
+									<form class="form" action="creer.php" method="post" name="form1">
 										<p>Add Account Panel</p>
 
 										<div class="form-outline mb-4">
