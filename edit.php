@@ -1,6 +1,6 @@
 <?php
 require "header.php";
-include_once("config.php");
+include_once("db.php");
 
 if(isset($_POST['update']))
 {	

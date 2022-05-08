@@ -1,6 +1,6 @@
 <?php
 //db
-include_once "config.php";
+include_once "db.php";
 $result = mysqli_query($mysqli, "SELECT * FROM etudiant ORDER BY id DESC");
 require "header.php";
 ?>
