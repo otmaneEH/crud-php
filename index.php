@@ -8,8 +8,9 @@ require "header.php";
 
 </article>
 
-<table class="table table-bourder " style="margin-left:auto;margin-right:auto; width: 80%; margin-top: 20vh;">
-	<thead>
+<table class="table table-striped  " style="margin-left:auto;margin-right:auto; width: 80%; margin-top: 20vh;">
+	<thead class="thead-dark">
+		
 		<tr>
 			<th>Name</th>
 			<th>Email</th>
