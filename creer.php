@@ -46,7 +46,7 @@ if (isset($_POST['Submit'])) {
   } else {
 
     $result = mysqli_query($mysqli, "INSERT INTO etudiant(name,email) VALUES('$name','$email')");
-    $suc="<font color='green'>Data added successfully.";
+    $suc="<font color='green'>Données ajoutées avec succès.";
   }
 }
 ?>
@@ -118,13 +118,13 @@ if (isset($_POST['Submit'])) {
                     <p>Add Account Panel</p>
 
                     <div class="form-outline mb-4">
-                      <input type="text" id="form2Example11" class="form-control" placeholder="entre votre nom" name="name" />
+                      <input type="text" id="form2Example11" class="form-control" placeholder="entre votre nom" name="name" require />
                       <label class="form-label" for="form2Example11"><?php echo "$nameEr";?></label>
                     </div>
 
                     <div class="form-outline mb-4">
-                      <input type="email" id="emaill" class="form-control" name="email" />
-                      <label class="form-label" for="emaill"><?php echo "$nameEr";?></label>
+                      <input type="email" id="emaill" class="form-control" name="email" placeholder="votre email" require />
+                      <label class="form-label" for="emaill" ><?php echo "$emailEr";?></label>
                     </div>
 
                     <div class="text-center pt-1 mb-5 pb-1">
