@@ -1,29 +1,31 @@
 <?php
 //db
+
 include_once "db.php";
-if($_REQUEST['search']){
-	$serch = $GET['search'];}else{
-		$result1 = mysqli_query($mysqli, "SELECT * FROM etudiant ORDER BY id DESC");
-	}
-$result = mysqli_query($mysqli, "SELECT * FROM etudiant ORDER BY id DESC");
-$result2 = mysqli_query($mysqli, "SELECT * FROM `etudiant` WHERE `email` LIKE '$serch'");
+$serch = "";
+if (isset($_REQUEST['search'])) {
+	$serch = $_GET['search'];
+}
+$result = mysqli_query($mysqli, "SELECT * FROM `etudiant` WHERE `email` LIKE '%$serch%'");
 require "header.php";
 ?>
 
 <table class="table table-striped  " style="margin-left:auto;margin-right:auto; width: 80%; margin-top: 20vh;">
 	<thead class="thead-dark">
 		<tr>
+			<td></td>
 
-			<td  colspan="3">
+			<td colspan="2">
 				<form action="" method="GET">
-					<div class="col-sm-2 float-left">
-		<div class="input-group rounded">
+						<div class="input-group rounded">
 
-			<input type="search" class="form-control rounded" placeholder="Search" name="search" value="<?php if(isset($_GET['search'])){ echo $_GET['search'];};?>" />
-			<span class="input-group-text border-0" id="search-addon">
-				<button type="submit" style="border: none;" value=""></button>
-			</span>
-		</div>
+							<input style="width: 300px;" type="search" class="form-control rounded" placeholder="enter an email" name="search" value="<?php if (isset($_GET['search'])) {
+																																							echo $_GET['search'];
+																																						}; ?>" />
+							<span class="input-group-text border-0" id="search-addon">
+								<button type="submit" style="border: none; height: 100%; width: 100%;" value=""><img src="img/loupe.png" alt="" srcset=""></button>
+							</span>
+						</div>
 				</form>
 			</td>
 
@@ -41,7 +43,7 @@ require "header.php";
 
 		<?php
 
-		while ($res = mysqli_fetch_array($result2)) {
+		while ($res = mysqli_fetch_array($result)) {
 			echo "<tr>";
 			echo "";
 			echo "<td>" . $res['name'] . "</td>";
