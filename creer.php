@@ -107,7 +107,7 @@ if (isset($_POST['Submit'])) {
 
                   <div class="text-center">
                     <img src="img/img.png" style="width: 185px;" alt="logo">
-                    <h4 class="mt-1 mb-5 pb-1">We are The Lotus Team</h4>
+                    <h4 class="mt-1 mb-5 pb-1"><?php echo "$suc";?></h4>
                   </div>
 
                   <form class="form" action="addcopy.php" method="post" name="form1">
