@@ -120,7 +120,7 @@ if (isset($_POST['Submit'])) {
 
                     <div class="form-outline mb-4">
                       <input type="email" id="emaill" class="form-control" name="email" />
-                      <label class="form-label" for="emaill">Email</label>
+                      <label class="form-label" for="emaill"><?php echo "$nameEr";?></label>
                     </div>
 
                     <div class="text-center pt-1 mb-5 pb-1">
