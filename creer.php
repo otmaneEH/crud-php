@@ -115,7 +115,7 @@ if (isset($_POST['Submit'])) {
 
                     <div class="form-outline mb-4">
                       <input type="text" id="form2Example11" class="form-control" placeholder="entre votre nom" name="name" />
-                      <label class="form-label" for="form2Example11">Nam</label>
+                      <label class="form-label" for="form2Example11"><?php echo "$nameEr";?></label>
                     </div>
 
                     <div class="form-outline mb-4">
