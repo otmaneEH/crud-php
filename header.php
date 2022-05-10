@@ -81,8 +81,8 @@
                     d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
             </svg>
         </a>
-        <a class="py-2 d-none d-md-inline-block" href="index.php">Home</a>
-        <a class="py-2 d-none d-md-inline-block" href="creer.php">Add New Data</a>
+        <a class="py-2  d-md-inline-block" href="index.php">Home</a>
+        <a class="py-2  d-md-inline-block" href="creer.php">Add New Data</a>
         <!-- <a class="py-2 d-none d-md-inline-block hide">Add New Data</a>
         <a class="py-2 d-none d-md-inline-block hide " >Add New Data</a>
         <a class="py-2 d-none d-md-inline-block hide">Add New Data</a> -->
