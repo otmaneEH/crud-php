@@ -12,7 +12,7 @@ if (isset($_POST['Submit'])) {
       $nameEr = "<span style=\"color:red;\">Name is empty<span>";
     }
     if (empty($email)) {
-      $emailEr = "Email is empty.";
+      $emailEr = "<span style=\"color:red;\">email is empty<span>.";
     }
     if (empty($name) || empty($email)) {
       $bac = "<br/><a href='javascript:self.history.back();'>Go Back</a>";
