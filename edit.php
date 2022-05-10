@@ -6,8 +6,8 @@ if (isset($_POST['update'])) {
 
 	$id = mysqli_real_escape_string($mysqli, $_POST['id']);
 
-	$name =mysqli_real_escape_string($mysqli, $_POST['name']);
-	$email =mysqli_real_escape_string($mysqli, $_POST['email']);
+	$name = mysqli_real_escape_string($mysqli, $_POST['name']);
+	$email = mysqli_real_escape_string($mysqli, $_POST['email']);
 
 	if (empty($name) || empty($email)) {
 
