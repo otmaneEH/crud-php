@@ -19,7 +19,7 @@ require "header.php";
 				<form action="" method="GET">
 						<div class="input-group rounded">
 
-							<input style="width: 300px;" type="search" class="form-control rounded" placeholder="enter an email" name="search" value="<?php if (isset($_GET['search'])) {
+							<input type="search" class="form-control rounded" placeholder="enter an email" name="search" value="<?php if (isset($_GET['search'])) {
 																																							echo $_GET['search'];
 																																						}; ?>" />
 							<span class="input-group-text border-0" id="search-addon">
