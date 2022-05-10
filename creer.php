@@ -25,9 +25,7 @@ if (isset($_POST['Submit'])) {
   } else {
 
     $result = mysqli_query($mysqli, "INSERT INTO etudiant(name,email) VALUES('$name','$email')");
-
-    echo "<font color='green'>Data added successfully.";
-    echo "<br/><a href='index.php'>View Result</a>";
+    $suc="<font color='green'>Data added successfully.";
   }
 }
 ?>
