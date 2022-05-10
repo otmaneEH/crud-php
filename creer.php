@@ -95,6 +95,10 @@ if (isset($_POST['Submit'])) {
 </head>
 
 <body>
+  <h1>
+    <?php
+        ?>
+  </h1>
 
   <section>
     <div class="container-fluid mt-4">
