@@ -9,8 +9,8 @@ if (isset($_REQUEST['search'])) {
 $result = mysqli_query($mysqli, "SELECT * FROM `etudiant` WHERE `email` LIKE '%$serch%'");
 require "header.php";
 ?>
-
-<table class="table table-striped  " style="margin-left:auto;margin-right:auto; width: 80%; margin-top: 20vh;">
+<div class="container">
+<table  class="table table-striped container-fluid mt-5  ">
 	<thead class="thead-dark">
 		<tr>
 			<td></td>
@@ -35,6 +35,7 @@ require "header.php";
 		<tr>
 			<th>Name</th>
 			<th>Email</th>
+			<th>adding time</th>
 			<th>Action</th>
 		</tr>
 	</thead>
@@ -48,13 +49,14 @@ require "header.php";
 			echo "";
 			echo "<td>" . $res['name'] . "</td>";
 			echo "<td>" . $res['email'] . "</td>";
+			echo "<td>" . $res['adding_time'] . "</td>";
 			echo "<td><a class=\"btn btn-primary\" href=\"edit.php?id=$res[id]\">Edit</a> | <a class=\"btn btn-danger delete\" href=\"delete.php?id=$res[id]\">Delete</a></td>";
 		}
 		?>
 
 	</tbody>
 </table>
-
+</div>
 <script>
 	$('.delete').on('click', function(e) {
 		e.preventDefault();
