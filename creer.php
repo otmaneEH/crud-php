@@ -1,7 +1,28 @@
 <?php
 require "header.php";
 include_once "db.php";
+$msg="";
+$bac="";
+$nameEr="entre votre nom";
+$emailEr="entre votre email";
 
+$suc="Hello";
+date_default_timezone_set("Africa/Cairo");  
+        $h = date('G');
+
+        if($h>=5 && $h<=11)
+        {
+            $suc= "bonne matinée";
+        }
+        else if($h>=12 && $h<=15)
+        {
+            $suc= "bon après-midi ";
+        }
+        else
+        {
+            $suc= "bonne soirée
+            ";
+        } 
 if (isset($_POST['Submit'])) {
   $name = mysqli_real_escape_string($mysqli, $_POST['name']);
   $email = mysqli_real_escape_string($mysqli, $_POST['email']);
