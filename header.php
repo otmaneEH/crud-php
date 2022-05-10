@@ -30,7 +30,7 @@
     <style>
 
         .bd-placeholder-img {
-            font-size: 1.125rem;
+            font-size: 1rem;
             text-anchor: middle;
             -webkit-user-select: none;
             -moz-user-select: none;
@@ -71,7 +71,7 @@
 
 <body>
 
-<nav class="site-header sticky-top py-1">
+<nav class="site-header navbar navbar-expand-lg sticky-top py-1">
     <div class="container d-flex flex-column flex-md-row justify-content-between">
         <a class="py-2" href="index.php" aria-label="Product">
             <img src="img/home.png" alt="imagenav" style="height:25px;width:25px;">
@@ -88,3 +88,4 @@
         <a class="py-2 d-none d-md-inline-block hide">Add New Data</a> -->
     </div>
 </nav>
+
