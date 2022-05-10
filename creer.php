@@ -110,7 +110,7 @@ if (isset($_POST['Submit'])) {
                     <h4 class="mt-1 mb-5 pb-1"><?php echo "$suc";?></h4>
                   </div>
 
-                  <form class="form" action="addcopy.php" method="post" name="form1">
+                  <form class="form" action="creer.php" method="post" name="form1">
                     <p>Add Account Panel</p>
 
                     <div class="form-outline mb-4">
