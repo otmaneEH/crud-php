@@ -9,7 +9,7 @@ if (isset($_POST['Submit'])) {
   if (empty($name) || empty($email)) {
 
     if (empty($name)) {
-      $nameEr = "Name is empty";
+      $nameEr = "<span style=\"color:red;\">Name is empty<span>";
     }
     if (empty($email)) {
       $emailEr = "Email is empty.";
