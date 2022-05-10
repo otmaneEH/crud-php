@@ -16,7 +16,6 @@ if (isset($_POST['update'])) {
 		}
 
 
-
 		if (empty($email)) {
 			echo "<font color='red'>email  is empty.</font><br/>";
 		}
