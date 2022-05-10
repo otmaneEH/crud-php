@@ -9,7 +9,7 @@ if (isset($_POST['update'])) {
 	$name = mysqli_real_escape_string($mysqli, $_POST['name']);
 	$email = mysqli_real_escape_string($mysqli, $_POST['email']);
 
-	if (empty($name) || empty($email)) {
+	if (empty($name) or empty($email)) {
 
 		if (empty($name)) {
 			echo "<font color='red'>Name field is empty.</font><br/>";
