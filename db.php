@@ -1,7 +1,8 @@
 <?php
 
-$mysqli = mysqli_connect('localhost', 'root', '','mydb1'); 
-if(!isset($mysqli)){
-	echo "error";
-}
-?>
+$USER_DB="root";
+$HOST="localhost";
+$PASSWORD='';
+try{
+	$mysqli = new PDO('mysql:localhost;dbname=mydb1',$USER_DB, $PASSWORD);
+} 
