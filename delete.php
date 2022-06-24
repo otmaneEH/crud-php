@@ -4,7 +4,9 @@ if(!isset($_GET['id'])){
 }
 $id = $_GET['id'];
 include("db.php");
-$result = mysqli_query($mysqli, "DELETE FROM etudiant WHERE id=$id");
+$result = $mysqli->prepare("DELETE FROM etudiant WHERE id={$id}");
+$result->execute([":id",$id]);
 
 header("Location:index.php");
+
 ?>
