@@ -6,7 +6,7 @@ $serch = "";
 if (isset($_REQUEST['search'])) {
 	$serch = $_GET['search'];
 }
-$result = mysqli_query($mysqli, "SELECT * FROM `etudiant` WHERE `email` LIKE '%$serch%'");
+$result =$mysqli->query("SELECT * FROM `etudiant` WHERE `email` LIKE '%$serch%'");
 require "header.php";
 ?>
 <div class="container">
